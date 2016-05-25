@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<meta http-equiv="Cache-Control"
+	content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<title>Facebook</title>
+<body  ng-app="myApp" ng-controller="orderCtrl">
+<div class="blue">
+
+
+ <form  method="post"	action="groups">
+   <input  id="gr" type ="submit" value="groups"/>
+ 	</form>
+ 	 <form  method="post"	action="friends">
+   <input  id="pr" type ="submit" value="Friends"/>
+ 	</form>
+ 	<form  method="post"	action="logout">
+ 	  <input id="logout" type ="submit" value="logout"/>
+ 	</form>
+ 	
+</div>
+<div class="container">
+
+  <div class="row">
+ <div class="col-sm-4">  
+  <h2>About</h2>
+  
+ 	<table class="table table-striped">
+  <tbody ng-repeat="about in abouts" >
+    <tr><td>Name: {{ about.name }}</td></tr>
+    <tr><td>City: {{ about.city }}</td></tr>
+    <tr><td>Currently {{ about.currently }}</td></tr>
+    <tr><td>Date Of Birth: {{ about.dob }}</td></tr>
+  </tbody>
+</table>
+<form  method="post"	action="aboutedit">
+ 	<input type ="submit" value="edit about" name="aboutedit"/>
+ 	</form>
+ </div>
+   <div class="col-sm-4">  
+  <form  method="post"	action="news">
+  <input type="text" value="Whats on your mind" name="event">
+ 	  <input  type ="submit" value="Update Status"/>
+ 	</form>
+  </div>
+  <div class="col-sm-4">
+ <h2>Interests
+  </h2>
+  <table class="table table-striped">
+  <tbody><tr ng-repeat="interest in interests" >
+    <td><li>{{ interest.interests }}</li></td>
+  </tr></tbody>
+</table>
+<form method="post"	action="interestedit">
+ 	<input type ="submit" value="Edit interest" name="interestedit"/>
+ 	</form>
+</div>
+</div>
+  <div class="row">
+ <div class="col-sm-4">
+ </div>
+  <div class="col-sm-4">
+  <% include news %></div>
+ </div>
+</div>
+</html>	

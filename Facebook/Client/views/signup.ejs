@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/angular/jquery.mini.js"></script>
+<script src="/angular/angular.js"></script>
+<script src="/angular/angular-animate.js"></script>
+<script src="/angular/ui-bootstrap-tpls-0.13.4.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/angular/signup.js"></script>
+<link rel='stylesheet' href='/bootstrap/css/bootstrap.min.css' />
+<title><%=title%></title>
+</head>
+<body ng-app="signup" ng-controller="signup">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">Sign Up</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12" style="margin: 10px;">
+							Username:<br> <input type="text" name="username"
+								ng-model="username">
+						</div>
+						<div class="col-md-12" style="margin: 10px;">
+							Password:<br> <input type="password" name="password"
+								ng-model="password">
+						</div>
+						<div class="col-md-12" style="margin: 10px;">
+							First Name:<br> <input type="text" name="firstname"
+								ng-model="firstname">
+						</div>
+						<div class="col-md-12" style="margin: 10px;">
+							Last Name:<br> <input type="text" name="lastname"
+								ng-model="lastname">
+						</div>
+						<div class="col-md-12" style="margin: 10px;">
+							Email:<br> <input type="text" name="email"
+								ng-model="email">
+						</div>
+
+						<div class="col-md-12" style="margin: 10px;">
+		
+							<input type="submit" class="btn btn-success" ng-click="signup();"
+								value="Signup" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
